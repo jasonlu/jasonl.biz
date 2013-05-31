@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/anjlab/bootstrap-rails.git
+  revision: a638ef3c1cceba5da48524738f3811c7f8ebbb75
+  branch: 3.0.0
+  specs:
+    anjlab-bootstrap-rails (3.0.0.0.alpha1)
+      railties (>= 3.0)
+      sass (>= 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -32,9 +41,6 @@ GEM
       activesupport
       builder
       json
-    anjlab-bootstrap-rails (2.3.1.2)
-      railties (>= 3.0)
-      sass (>= 3.2)
     annotate (2.5.0)
       rake
     arel (3.0.2)
@@ -47,6 +53,8 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.1)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (2.3.1.2)
+      sass (~> 3.2)
     bootstrap_helper (3.2.2.1)
       railties (~> 3.0)
       simple_form (~> 2.0.2)
@@ -96,12 +104,18 @@ GEM
       multi_json (~> 1.0)
     faraday (0.8.7)
       multipart-post (~> 1.1)
+    font-awesome-sass-rails (3.0.2.2)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
     fssm (0.2.10)
+    haml (4.0.3)
+      tilt
     hashie (2.0.5)
     high_voltage (1.2.2)
     highline (1.6.19)
     hike (1.2.2)
     hipchat (0.9.0)
+      httparty
       httparty
     httparty (0.11.0)
       multi_json (~> 1.0)
@@ -109,12 +123,18 @@ GEM
     httpauth (0.2.0)
     i18n (0.6.4)
     journey (1.0.4)
-    jquery-rails (3.0.0)
+    jquery-rails (2.3.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (3.0.1)
+      jquery-rails
+      railties (>= 3.1.0)
     json (1.8.0)
     jwt (0.1.8)
       multi_json (>= 1.5)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     magic_encoding (0.0.2)
     mail (2.4.4)
       i18n (>= 0.4.0)
@@ -126,6 +146,7 @@ GEM
     multi_xml (0.5.3)
     multipart-post (1.2.0)
     mysql2 (0.3.11)
+    nested_form (0.3.2)
     net-scp (1.1.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -133,6 +154,7 @@ GEM
     net-ssh (2.6.7)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
+    nokogiri (1.5.9)
     oauth2 (0.8.1)
       faraday (~> 0.8)
       httpauth (~> 0.1)
@@ -164,6 +186,9 @@ GEM
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-pjax (0.7.0)
+      nokogiri (~> 1.5)
+      rack (~> 1.3)
     rack-ssl (1.3.3)
       rack
     rack-test (0.6.2)
@@ -176,6 +201,21 @@ GEM
       activesupport (= 3.2.11)
       bundler (~> 1.0)
       railties (= 3.2.11)
+    rails_admin (0.4.8)
+      bootstrap-sass (~> 2.2)
+      builder (~> 3.0)
+      coffee-rails (~> 3.1)
+      font-awesome-sass-rails (~> 3.0, >= 3.0.0.1)
+      haml (~> 4.0)
+      jquery-rails (~> 2.1)
+      jquery-ui-rails (~> 3.0)
+      kaminari (~> 0.14)
+      nested_form (~> 0.3)
+      rack-pjax (~> 0.6)
+      rails (~> 3.1)
+      remotipart (~> 1.0)
+      safe_yaml (~> 0.6)
+      sass-rails (~> 3.1)
     railties (3.2.11)
       actionpack (= 3.2.11)
       activesupport (= 3.2.11)
@@ -186,9 +226,11 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
+    remotipart (1.0.5)
     rmagick (2.13.2)
     rvm-capistrano (1.3.0)
       capistrano (>= 2.0.0)
+    safe_yaml (0.9.2)
     sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -213,6 +255,10 @@ GEM
     turbo-sprockets-rails3 (0.3.6)
       railties (> 3.2.8, < 4.0.0)
       sprockets (>= 2.0.0)
+    twitter-bootstrap-rails (2.2.6)
+      actionpack (>= 3.1)
+      execjs
+      railties (>= 3.1)
     tzinfo (0.3.37)
     uglifier (2.1.1)
       execjs (>= 0.3.0)
@@ -226,11 +272,12 @@ PLATFORMS
 
 DEPENDENCIES
   airbrake
-  anjlab-bootstrap-rails (>= 2.2.2)
+  anjlab-bootstrap-rails!
   annotate
   auto-facebook
   better_errors
   binding_of_caller
+  bootstrap-sass (~> 2.3.1.2)
   bootstrap_helper (>= 2.1.2.1)
   cape
   capistrano
@@ -253,6 +300,7 @@ DEPENDENCIES
   pry-nav
   pry-remote
   rails (= 3.2.11)
+  rails_admin
   rmagick
   rvm-capistrano
   sass-rails (~> 3.2.3)
@@ -260,5 +308,6 @@ DEPENDENCIES
   settingslogic
   simple_form (= 2.0.3)
   turbo-sprockets-rails3
+  twitter-bootstrap-rails
   uglifier (>= 1.0.3)
   will_paginate (= 3.0.3)
