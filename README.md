@@ -1,4 +1,5 @@
 
+
 ### Style Guides
 
 * [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)
@@ -9,6 +10,3 @@
 ### Speedup Tips
 
 * [Speed up the Rails Asset Pipeline precompile process](http://stackoverflow.com/questions/11390447/how-can-you-speed-up-the-rails-asset-pipeline-precompile-process/11390454#11390454)
-
-
-
