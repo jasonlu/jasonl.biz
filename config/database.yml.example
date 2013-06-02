@@ -3,7 +3,7 @@ development: &default
   encoding: utf8
   database: jasonl_biz_development
   host: localhost
-  username: root
+  username: jasonl
   password: ""
 
 test: &TEST

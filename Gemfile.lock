@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/anjlab/bootstrap-rails.git
-  revision: a638ef3c1cceba5da48524738f3811c7f8ebbb75
+  revision: 2d1bc3b315416c1a9ea63c283f901ef9c45b65e8
   branch: 3.0.0
   specs:
     anjlab-bootstrap-rails (3.0.0.0.alpha1)
@@ -92,6 +92,7 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
+    daemons (1.1.9)
     dalli (2.6.4)
     debug_inspector (0.0.2)
     devise (2.2.4)
@@ -100,6 +101,7 @@ GEM
       railties (~> 3.1)
       warden (~> 1.2.1)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
     faraday (0.8.7)
@@ -247,6 +249,10 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    thin (1.5.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
     thor (0.18.1)
     tilt (1.4.1)
     treetop (1.4.12)
@@ -255,10 +261,6 @@ GEM
     turbo-sprockets-rails3 (0.3.6)
       railties (> 3.2.8, < 4.0.0)
       sprockets (>= 2.0.0)
-    twitter-bootstrap-rails (2.2.6)
-      actionpack (>= 3.1)
-      execjs
-      railties (>= 3.1)
     tzinfo (0.3.37)
     uglifier (2.1.1)
       execjs (>= 0.3.0)
@@ -277,7 +279,6 @@ DEPENDENCIES
   auto-facebook
   better_errors
   binding_of_caller
-  bootstrap-sass (~> 2.3.1.2)
   bootstrap_helper (>= 2.1.2.1)
   cape
   capistrano
@@ -291,6 +292,7 @@ DEPENDENCIES
   high_voltage
   hipchat
   jquery-rails
+  kaminari (~> 0.12)
   magic_encoding
   mysql2
   omniauth
@@ -307,7 +309,6 @@ DEPENDENCIES
   seo_helper (~> 1.0)
   settingslogic
   simple_form (= 2.0.3)
+  thin
   turbo-sprockets-rails3
-  twitter-bootstrap-rails
   uglifier (>= 1.0.3)
-  will_paginate (= 3.0.3)
